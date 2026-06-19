@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+</head>
+<body>
+
+<header class="main-header">
+    <div th:fragment="navigation" class="container">
+        <nav class="navbar navbar-expand-lg main-nav px-0">
+            <a class="navbar-brand" href="/mojo">
+                <img th:src="@{/img/favicon.png}" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar icon-bar-1"></span>
+                <span class="icon-bar icon-bar-2"></span>
+                <span class="icon-bar icon-bar-3"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ml-auto text-uppercase f1">
+                    <li>
+                        <a href="/home" class="active active-first">home</a>
+                    </li>
+                    <li>
+                        <a href="/usuariolista">Usuários</a>
+                    </li>
+                    <li>
+                        <a href="/equipamentolista">Equipamentos</a>
+                    </li>
+                    <li>
+                        <a href="/reservalista">Reservas</a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex ml-auto" style="margin-left: 20px;" th:action="@{/logout}" th:method="POST">
+                    <button class="btn btn-outline-light" type="submit">Sair</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!-- /.container -->
+</header>
+
+</body>
+</html>
